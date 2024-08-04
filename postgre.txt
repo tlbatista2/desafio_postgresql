@@ -1,0 +1,13 @@
+docker run --name curso_docker -e POSTGRES_DB=curso_docker -e POSTGRES_USER=docker_usr -e POSTGRES_PASSWORD=docker_pwd -p 5432:5432 -d postgres
+
+Este comando faz o seguinte:
+
+docker run: Executa um novo contêiner.
+--name curso_docker: Nomeia o contêiner como curso_docker.
+-e POSTGRES_DB=curso_docker: Define o nome do banco de dados como curso_docker.
+-e POSTGRES_USER=docker_usr: Define o usuário de acesso ao banco como docker_usr.
+-e POSTGRES_PASSWORD=docker_pwd: Define a senha do usuário como docker_pwd.
+-p 5432:5432: Mapeia a porta 5432 do contêiner para a porta 5432 do host, permitindo o acesso ao banco de dados.
+-d: Executa o contêiner em segundo plano (modo "detached").
+postgres: Especifica a imagem do PostgreSQL a ser usada.
+Este comando criará e iniciará um contêiner PostgreSQL que será acessível de forma transparente para os desenvolvedores em suas máquinas locais.
